@@ -1,0 +1,60 @@
+.drag-drop-upload {
+  position: relative;
+}
+
+.drag-drop-input {
+  display: none;
+}
+
+.drag-drop-placeholder {
+  padding: 48px;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.drag-drop-placeholder:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.drag-drop-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.drag-drop-hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+.drag-drop-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-lg);
+  z-index: 10;
+}
+
+.drag-drop-overlay-content {
+  text-align: center;
+}
+
+.drag-drop-overlay-content p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.drag-drop.dragging .drag-drop-placeholder {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}

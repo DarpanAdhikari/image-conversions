@@ -1,0 +1,95 @@
+.before-after-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: col-resize;
+  user-select: none;
+  outline: none;
+}
+
+.before-after-slider:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary);
+}
+
+.ba-image {
+  width: 100%;
+}
+
+.ba-image img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.ba-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ba-before img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.ba-after img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.ba-label {
+  position: absolute;
+  top: 16px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  pointer-events: none;
+}
+
+.ba-label-left {
+  left: 16px;
+}
+
+.ba-label-right {
+  right: 16px;
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: white;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.ba-handle-arrow {
+  font-size: 10px;
+  color: #333;
+}

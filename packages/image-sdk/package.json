@@ -1,0 +1,92 @@
+{
+  "name": "drp-imagesdk",
+  "version": "2.0.0",
+  "description": "DRP (Digital Resolution Pro) - One-line image processing, conversion, compression, and editing SDK for JavaScript",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "browser": "./dist/image-sdk.umd.js",
+  "unpkg": "./dist/image-sdk.min.js",
+  "jsdelivr": "./dist/image-sdk.min.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./convert": {
+      "import": "./dist/convert.js",
+      "types": "./dist/convert.d.ts"
+    },
+    "./resize": {
+      "import": "./dist/resize.js",
+      "types": "./dist/resize.d.ts"
+    },
+    "./crop": {
+      "import": "./dist/crop.js",
+      "types": "./dist/crop.d.ts"
+    },
+    "./filters": {
+      "import": "./dist/filters.js",
+      "types": "./dist/filters.d.ts"
+    },
+    "./metadata": {
+      "import": "./dist/metadata.js",
+      "types": "./dist/metadata.d.ts"
+    },
+    "./compress": {
+      "import": "./dist/compress.js",
+      "types": "./dist/compress.d.ts"
+    },
+    "./drp": {
+      "import": "./dist/drp.js",
+      "types": "./dist/drp.d.ts"
+    },
+    "./drp-class": {
+      "import": "./dist/drp-class.js",
+      "types": "./dist/drp-class.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:bundle": "rollup -c rollup.config.js",
+    "build:all": "npm run build && npm run build:bundle",
+    "prepack": "npm run build:all",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "image",
+    "editing",
+    "processing",
+    "conversion",
+    "compression",
+    "metadata",
+    "sdk",
+    "browser",
+    "drp",
+    "digital-resolution-pro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarpanAdhikari/image-conversions.git"
+  },
+  "homepage": "https://github.com/DarpanAdhikari/image-conversions#readme",
+  "bugs": "https://github.com/DarpanAdhikari/image-conversions/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.0",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "rollup": "^4.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

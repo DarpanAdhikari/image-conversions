@@ -1,0 +1,21 @@
+{
+  "name": "image-platform",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:sdk": "npm run build -w packages/image-sdk",
+    "build:demo": "npm run build -w apps/demo",
+    "dev": "npm run dev -w apps/demo",
+    "test": "npm run test --workspaces",
+    "test:sdk": "npm run test -w packages/image-sdk",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
